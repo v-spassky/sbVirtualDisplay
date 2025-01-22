@@ -77,7 +77,7 @@ class AbstractDisplay(EasyProcess):
             self._setup_xauth()
         EasyProcess.start(self)
         self.old_display_var = os.environ.get("DISPLAY", None)
-        self.redirect_display(True)
+        self.redirect_display(False)
         # wait until X server is active
         time.sleep(0.1)
         return self
